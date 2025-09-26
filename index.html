@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - @xau_usdpt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- マトリックス背景キャンバス -->
+    <canvas id="matrix-bg"></canvas>
+    
+    <!-- マウス追従エフェクト -->
+    <div id="mouse-trail"></div>
+    
+    <!-- メインコンテンツ -->
+    <div class="container">
+        <!-- ヘッダー -->
+        <header class="main-header">
+            <div class="glitch-container">
+                <h1 class="glitch-text" data-text="COMING SOON">COMING SOON</h1>
+            </div>
+        </header>
+        
+        <!-- メインセクション -->
+        <main class="main-content">
+            <!-- ロードバー -->
+            <div class="loading-bar-container">
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <div class="loading-text">INITIALIZING...</div>
+            </div>
+            
+            <!-- ターミナル風メッセージ -->
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command typing-animation">echo "新しいプロジェクトが始まります..."</span>
+                    </div>
+                    <div class="terminal-line delay-1">
+                        <span class="prompt">$</span>
+                        <span class="command typing-animation">system --status preparing</span>
+                    </div>
+                    <div class="terminal-line delay-2">
+                        <span class="output">STATUS: UNDER CONSTRUCTION</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Instagram誘導ボタン -->
+            <div class="cta-section">
+                <a href="https://instagram.com/xau_usdpt" target="_blank" class="instagram-btn neon-button">
+                    <i class="fab fa-instagram"></i>
+                    <span>Follow @xau_usdpt</span>
+                    <div class="btn-glow"></div>
+                </a>
+                
+                <div class="social-info">
+                    <p class="neon-text">最新情報をチェック</p>
+                </div>
+            </div>
+        </main>
+        
+        <!-- フッター -->
+        <footer class="main-footer">
+            <div class="countdown-container">
+                <div class="countdown-label">PROJECT LAUNCH IN:</div>
+                <div id="countdown" class="countdown"></div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- パーティクルエフェクト -->
+    <div id="particles"></div>
+    
+    <!-- JavaScript -->
+    <script src="js/matrix-bg.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
