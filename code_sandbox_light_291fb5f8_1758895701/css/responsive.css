@@ -1,0 +1,308 @@
+/* レスポンシブデザインの追加調整 */
+
+/* タブレット横向き */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        padding: 10px 20px;
+    }
+    
+    .main-content {
+        gap: 25px;
+    }
+    
+    .glitch-text {
+        font-size: 4rem;
+    }
+}
+
+/* タブレット縦向き */
+@media (max-width: 768px) and (orientation: portrait) {
+    .main-header {
+        margin-bottom: 30px;
+    }
+    
+    .terminal {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .terminal-line {
+        font-size: 0.85rem;
+    }
+    
+    .loading-bar-container {
+        max-width: 100%;
+    }
+    
+    .neon-button {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* スマートフォン横向き */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        min-height: 100vh;
+        padding: 10px;
+    }
+    
+    .main-header {
+        margin-bottom: 20px;
+    }
+    
+    .glitch-text {
+        font-size: 2rem;
+    }
+    
+    .main-content {
+        gap: 20px;
+    }
+    
+    .terminal {
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+    
+    .main-footer {
+        margin-top: 30px;
+    }
+}
+
+/* 小型スマートフォン */
+@media (max-width: 380px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .glitch-text {
+        font-size: 1.8rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .terminal {
+        padding: 10px;
+        border-radius: 6px;
+    }
+    
+    .terminal-header .terminal-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .terminal-line {
+        font-size: 0.75rem;
+        margin: 6px 0;
+    }
+    
+    .neon-button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+    
+    .neon-button .fab {
+        font-size: 1.1rem;
+    }
+    
+    .loading-bar {
+        height: 3px;
+    }
+    
+    .loading-text {
+        font-size: 0.8rem;
+    }
+    
+    .countdown {
+        font-size: 1.2rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.8rem;
+    }
+}
+
+/* 超小型画面 */
+@media (max-width: 320px) {
+    .glitch-text {
+        font-size: 1.5rem;
+    }
+    
+    .main-content {
+        gap: 15px;
+    }
+    
+    .terminal {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+    
+    .neon-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .countdown {
+        font-size: 1rem;
+    }
+}
+
+/* 高解像度ディスプレイ対応 */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .glitch-text {
+        font-size: 7rem;
+    }
+    
+    .terminal {
+        font-size: 1.1rem;
+        padding: 25px;
+    }
+    
+    .neon-button {
+        font-size: 1.2rem;
+        padding: 18px 36px;
+    }
+}
+
+/* 4K ディスプレイ対応 */
+@media (min-width: 2560px) {
+    .glitch-text {
+        font-size: 10rem;
+    }
+    
+    .terminal {
+        font-size: 1.3rem;
+        padding: 30px;
+        max-width: 800px;
+    }
+    
+    .neon-button {
+        font-size: 1.4rem;
+        padding: 22px 44px;
+    }
+    
+    .loading-bar {
+        height: 6px;
+    }
+    
+    .countdown {
+        font-size: 2rem;
+    }
+}
+
+/* タッチデバイス用の調整 */
+@media (hover: none) and (pointer: coarse) {
+    .neon-button:hover {
+        background: rgba(0, 255, 0, 0.1);
+    }
+    
+    .neon-button:active {
+        background: rgba(0, 255, 0, 0.2);
+        transform: scale(0.95);
+    }
+    
+    /* マウストレイルを非表示 */
+    #mouse-trail {
+        display: none;
+    }
+    
+    .custom-cursor {
+        display: none;
+    }
+    
+    body {
+        cursor: auto;
+    }
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    /* 既にダークテーマなので特別な調整は不要 */
+    body {
+        background: #000;
+    }
+}
+
+/* 高コントラスト対応 */
+@media (prefers-contrast: high) {
+    .glitch-text {
+        text-shadow: none;
+        color: #00ff00;
+        border: 2px solid #00ff00;
+        padding: 10px;
+    }
+    
+    .neon-button {
+        border-width: 3px;
+        background: rgba(0, 255, 0, 0.1);
+    }
+    
+    .terminal {
+        border-width: 3px;
+        background: rgba(0, 0, 0, 0.95);
+    }
+}
+
+/* モーション軽減対応 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .glitch-text::before,
+    .glitch-text::after {
+        display: none;
+    }
+    
+    #matrix-bg {
+        display: none;
+    }
+    
+    #particles {
+        display: none;
+    }
+    
+    .loading-progress {
+        animation: none;
+        width: 100%;
+    }
+}
+
+/* プリント用スタイル */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    #matrix-bg,
+    #mouse-trail,
+    #particles,
+    .custom-cursor {
+        display: none;
+    }
+    
+    .glitch-text {
+        color: black;
+        text-shadow: none;
+    }
+    
+    .terminal {
+        border: 2px solid black;
+        background: white;
+    }
+    
+    .neon-button {
+        border: 2px solid black;
+        background: white;
+        color: black;
+    }
+}
